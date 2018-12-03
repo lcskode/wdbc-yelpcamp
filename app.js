@@ -14,6 +14,8 @@ var campgroundRoutes  = require("./routes/campgrounds"),
     commentRoutes     = require("./routes/comments"),
     indexRoutes       = require("./routes/index");
 
+// DEFINE SERVER PORT 
+const PORT = process.env.PORT || 5000;
 
 // ============================================================================
 // APP CONFIG
@@ -82,6 +84,9 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 // ============================================================================
 // START SERVER
 // ============================================================================
-app.listen(3000, function(){
-  console.log("Yelpcamp server has started...");
-});
+
+// app.listen(3000, function(){
+//   console.log("Yelpcamp server has started...");
+// });
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
