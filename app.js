@@ -26,8 +26,6 @@ const PORT = process.env.PORT || 5000;
 // use yelp_camp db if exists, if not, it will create yelp_camp db.
 mongoose.connect(process.env.DATABASEURL);
 
-// use mLab db instead of local mongodb
-// mongoose.connect("mongodb://admin:admin123@ds149144.mlab.com:49144/wdbc1_yelp_camp"); 
 
 
 
