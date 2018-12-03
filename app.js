@@ -21,11 +21,15 @@ const PORT = process.env.PORT || 5000;
 // APP CONFIG
 // ============================================================================
 
-// use mLab db instead of local mongodb
-mongoose.connect("mongodb://admin:admin123@ds149144.mlab.com:49144/wdbc1_yelp_camp"); 
+// console.log(process.env.DATABASEURL);
 
 // use yelp_camp db if exists, if not, it will create yelp_camp db.
-// mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect(process.env.DATABASEURL);
+
+// use mLab db instead of local mongodb
+// mongoose.connect("mongodb://admin:admin123@ds149144.mlab.com:49144/wdbc1_yelp_camp"); 
+
+
 
 // use body parser
 app.use(bodyParser.urlencoded({extended: true}));
