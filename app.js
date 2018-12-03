@@ -23,9 +23,6 @@ const PORT = process.env.PORT || 5000;
 
 // console.log(process.env.DATABASEURL);
 
-// use yelp_camp db if exists, if not, it will create yelp_camp db.
-// mongoose.connect(process.env.DATABASEURL);
-
 // replaced mongoose.connect(process.env.DATABASEURL) and added default value.
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 mongoose.connect(url);
