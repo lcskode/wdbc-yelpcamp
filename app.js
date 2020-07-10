@@ -27,7 +27,6 @@ const PORT = process.env.PORT || 5000;
 
 // replaced mongoose.connect(process.env.DATABASEURL) and added default value.
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
-
 mongoose.connect(url);
 
 // use body parser
